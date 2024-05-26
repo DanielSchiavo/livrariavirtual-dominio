@@ -1,4 +1,4 @@
-package modelo;
+package br.com.danielschiavo.livrariavirtual.modelo;
 
 import lombok.*;
 
@@ -10,6 +10,8 @@ import java.util.UUID;
 @Builder
 @Getter
 @Setter
+@ToString
+@EqualsAndHashCode(of = "id")
 public class Ebook {
 
     private UUID id;
@@ -19,6 +21,8 @@ public class Ebook {
     private String nomeArquivo;
 
     private byte[] imagemCapa;
+
+    private byte[] conteudo;
 
     private Integer paginaAtual;
 
